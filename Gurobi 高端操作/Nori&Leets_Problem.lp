@@ -13,4 +13,6 @@ Bounds
  x_3 <= 1
  x_4 <= 1
  x_5 <= 1
+Generals
+ x_0 x_1 x_2 x_3 x_4 x_5
 End

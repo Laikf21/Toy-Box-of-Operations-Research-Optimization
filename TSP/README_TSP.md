@@ -27,7 +27,7 @@ $$
 
 <br />
 
-## **消除子环路：Subtour-Elimination**
+## **消除子环路方法1：Subtour-Elimination**
 子环路出现意味着出现了包含点个数为 $S,(S<|V|=N)$ 的子环。因此我们可以朴素地认为，只要加入子环路删除约束，依次删除所有少于N的子环即可。
 $$
 \sum_{i,j\in S}{x_{ij}\le |S|-1} \qquad 2\le|S|\le n-1,\; S\subset V
@@ -36,9 +36,13 @@ $$
 
 <br />
 
-## **消除子环路：Miller-Tucker-Zemlin (MTZ)**
+## **消除子环路方法1：Miller-Tucker-Zemlin (MTZ)**
 通过引入辅助决策变量 $\mu_i \; \forall i \in V, \mu_i \ge 0$，对于每条边 $(i,j) \in E$，构造 MTZ 约束。
 
 $$ \mu_i-\mu_j+Mx_{ij} \le M-1, \quad \forall i,j \in V, \; i,j\ne 0, i\ne j $$
 
 M是一个足够大的正数，理论上应当为 $\mu_i -\mu_j+1$ 的一个上界即可。
+
+# 动态规划求解TSP问题
+
+我们也可以使用动态规划的方法对TSP问题进行求解。求解复杂度为 $O(n^22^n)$。虽然动态规划可以降低求解的复杂度，但是仍然为一个指数时间复杂度的算法
