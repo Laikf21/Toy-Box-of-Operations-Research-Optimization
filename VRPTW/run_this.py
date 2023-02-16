@@ -74,12 +74,11 @@ if __name__ == "__main__":
     # model_handler.build_SP(data=data)
     # model_handler.SP.optimize()
     # model_handler.print_SP(data)
-    #
+
     # BP_handler = BP.Branch_and_Price(data=data)
     # BP_handler.copy_model(model_handler)
     # BP_handler.Column_Generation()
-    #
-    #
+
     # print("RMP:", model_handler.RMP.NumVars)
     # model_handler.RMP.write('RMP.lp')
 
