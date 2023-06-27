@@ -118,8 +118,7 @@ class Model_builder(object):
         for i in range(data.node_num):
             var_s_name = 's_' + str(i)
             # self.s[i] = self.SP.addVar(lb=data.ready_time[i], ub=data.due_time[i], vtype=GRB.CONTINUOUS, name=var_s_name)
-            self.s[i] = self.SP.addVar(lb=0, ub=10000, vtype=GRB.CONTINUOUS,
-                                       name=var_s_name)
+            self.s[i] = self.SP.addVar(lb=0, ub=10000, vtype=GRB.CONTINUOUS, name=var_s_name)
             for j in range(data.node_num):
                 if(data.arcs[i, j] == 1):
                     var_x_name = 'x_' + str(i) + '_' + str(j)
